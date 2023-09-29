@@ -35,6 +35,10 @@ echo $user['username'];
 ```
 or `null` if no file(s) is uploaded.
 
+## HTTP API
+
+`cform.php?dump` dumps all submissions and file uploads name to JSON.
+
 ## Form API
 
 Arguments can be given through URL query (e.g. `cform.php?_mode=create`) or POST body (e.g. `<input type="hidden" name="_mode" value="create">`).
