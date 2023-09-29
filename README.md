@@ -33,6 +33,7 @@ echo $user['username'];
   'file' => 'path/to/file'
 ]
 ```
+or `null` if no file(s) is uploaded.
 
 ## Form API
 
@@ -128,7 +129,7 @@ if (isset($_GET['_error'])) {
   echo $_GET['_error'];
 }
 ?>
-<form action="cform.php" method="post">
+<form action="cform.php" method="post" enctype="multipart/form-data">
   <input type="hidden" name="_mode" value="register">
   <input type="hidden" name="_success" value="dashboard.php">
   <input type="hidden" name="_fail" value="register.php">
@@ -138,6 +139,7 @@ if (isset($_GET['_error'])) {
   <!-- Additional fields -->
   First Name: <input type="text" name="first_name">
   Last Name: <input type="text" name="last_name">
+  Photo: <input type="file" name="photo">
   <input type="submit" value="Register">
 </form>
 ```
