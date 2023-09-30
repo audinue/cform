@@ -261,7 +261,7 @@ function _cform_logout() {
     }
 }
 
-if ($_SERVER['SCRIPT_FILENAME'] == __FILE__) {
+if (realpath($_SERVER['SCRIPT_FILENAME']) == __FILE__) {
     if (@$_SERVER['REQUEST_METHOD'] == 'GET' && isset($_REQUEST['dump'])) {
         $dump = [
             'submissions' => [],
