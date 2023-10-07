@@ -25,7 +25,10 @@ function _cform_submission($group, $id) {
 }
 
 function cform_read($group, $id) {
-    return _cform_read(_cform_submission($group, $id));
+    $file = _cform_submission($group, $id);
+    if (is_file($file)) {
+        return _cform_read($file);
+    }
 }
 
 function _cform_write($group, $submission) {
